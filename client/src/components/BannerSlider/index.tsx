@@ -14,7 +14,7 @@ const settings: SliderSettings = {
   infinite: false,
   responsive: [
     {
-      breakpoint: 830,
+      breakpoint: 1170,
       settings: {
         vertical: false,
         verticalSwiping: false
