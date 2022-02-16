@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { CheckboxProps } from '.'
+import { RadioProps } from '.'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -16,41 +16,37 @@ export const Input = styled.input`
     width: 1.8rem;
     height: 1.8rem;
     border: 0.2rem solid ${theme.colors.darkGray};
-    border-radius: 0.2rem;
-    transition: background border ${theme.transition.fast};
-    position: relative;
+    border-radius: 50%;
     outline: none;
-
-    &::before {
-      content: '';
-      width: 0.6rem;
-      height: 0.9rem;
-      border: 0.2rem solid ${theme.colors.white};
-      border-top: 0;
-      border-left: 0;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 0.1rem;
-      opacity: 0;
-      transition: ${theme.transition.fast};
-    }
 
     &:focus {
       box-shadow: 0 0 0.5rem ${theme.colors.primary};
     }
 
+    &::after {
+      background: ${theme.colors.primary};
+      content: '';
+      position: absolute;
+
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      transition: opacity ${theme.transition.fast};
+      opacity: 0;
+    }
+
     &:checked {
       border-color: ${theme.colors.primary};
-      background: ${theme.colors.primary};
+      position: relative;
 
-      &::before {
+      &::after {
         opacity: 1;
       }
     }
   `}
 `
 
-export const Label = styled.label<Pick<CheckboxProps, 'labelColors'>>`
+export const Label = styled.label<Pick<RadioProps, 'labelColors'>>`
   ${({ theme, labelColors }) => css`
     cursor: pointer;
     padding-left: ${theme.spacings.xxsmall};
