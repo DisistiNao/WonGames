@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render with label 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.2rem solid #2E2F42;
+  border-radius: 50%;
+  outline: none;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0.5rem #F231A5;
+}
+
+.c1::after {
+  background: #F231A5;
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  opacity: 0;
+}
+
+.c1:checked {
+  border-color: #F231A5;
+  position: relative;
+}
+
+.c1:checked::after {
+  opacity: 1;
+}
+
+.c2 {
+  cursor: pointer;
+  padding-left: 0.8rem;
+  color: #FAFAFA;
+  line-height: 1.8rem;
+}
+
+<main
+  class="c0"
+>
+  <input
+    class="c1"
+    id="radio"
+    type="radio"
+    value=""
+  />
+  <label
+    class="c2"
+    for="radio"
+  >
+    Radio label
+  </label>
+</main>
+`;

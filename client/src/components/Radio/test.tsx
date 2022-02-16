@@ -7,11 +7,15 @@ import userEvent from '@testing-library/user-event'
 
 describe('<Radio />', () => {
   it('should render with label', () => {
-    renderWithTheme(<Radio label="Radio label" labelFor="radio" />)
+    const { container } = renderWithTheme(
+      <Radio label="Radio label" labelFor="radio" />
+    )
 
     expect(screen.getByRole('radio')).toBeInTheDocument()
     expect(screen.getByLabelText(/radio label/i)).toBeInTheDocument()
     expect(screen.getByText(/radio label/i)).toHaveAttribute('for', 'radio')
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render without label', () => {
