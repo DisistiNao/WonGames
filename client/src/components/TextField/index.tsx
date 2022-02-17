@@ -31,9 +31,15 @@ const TextField = ({
   return (
     <S.Wrapper>
       {!!label && <S.Label htmlFor={labelFor}>{label}</S.Label>}
-      <S.InputWrapper iconPosition={iconPosition}>
-        {!!icon && <S.Icon>{icon}</S.Icon>}
-        <S.Input type="text" {...props} onChange={onChange} value={value} />
+      <S.InputWrapper>
+        {!!icon && <S.Icon iconPosition={iconPosition}>{icon}</S.Icon>}
+        <S.Input
+          type="text"
+          {...props}
+          onChange={onChange}
+          value={value}
+          iconPosition={iconPosition}
+        />
       </S.InputWrapper>
     </S.Wrapper>
   )

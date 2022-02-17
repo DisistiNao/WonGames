@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { Email } from '@styled-icons/material-outlined/Email'
 
 import TextField from '.'
+import { debug } from 'console'
 
 describe('<TextField />', () => {
   it('should render with label', () => {
@@ -30,6 +31,14 @@ describe('<TextField />', () => {
     renderWithTheme(<TextField icon={<Email data-testid="icon" />} />)
 
     expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should render an icon on the right side', () => {
+    renderWithTheme(
+      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />
+    )
+
+    expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 })
   })
 
   it('changes its value when typing', async () => {
