@@ -36,3 +36,20 @@ export const withIcon: Story = (args) => (
 withIcon.args = {
   icon: <Email />
 }
+
+export const isDisabled: Story = (args) => (
+  <div style={{ maxWidth: 300, padding: 15 }}>
+    <TextField disabled {...args} />
+  </div>
+)
+
+export const withError: Story = (args) => (
+  <div style={{ maxWidth: 300, padding: 15 }}>
+    <TextField {...args} />
+  </div>
+)
+
+withError.args = {
+  icon: <Email />,
+  error: 'Ops... an error has occurred'
+}
