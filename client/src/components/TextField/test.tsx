@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event'
 import { Email } from '@styled-icons/material-outlined/Email'
 
 import TextField from '.'
-import { debug } from 'console'
 
 describe('<TextField />', () => {
   it('should render with label', () => {
@@ -90,7 +89,7 @@ describe('<TextField />', () => {
   })
 
   it('should render with error', () => {
-    renderWithTheme(
+    const { container } = renderWithTheme(
       <TextField
         label="TextField"
         labelFor="TextField"
@@ -101,6 +100,7 @@ describe('<TextField />', () => {
     )
 
     expect(screen.getByLabelText('Error')).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should be accessible with tab', () => {
