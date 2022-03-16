@@ -1,11 +1,7 @@
 import Heading from 'components/Heading'
 import Logo from 'components/Logo'
-import TextField from 'components/TextField'
-
-import { Email } from '@styled-icons/material-outlined/Email'
 
 import * as S from './styles'
-import Button from 'components/Button'
 
 export type AuthProps = {
   title: string
@@ -35,15 +31,6 @@ const Auth = ({ title, children }: AuthProps) => (
         </Heading>
         {children}
       </S.ContentWrapper>
-      {/* <TextField id="Email" placeholder="Email" icon={<Email />} />
-      <TextField
-        id="Password"
-        placeholder="Password"
-        type="password"
-        icon={<Email />}
-      />
-      <S.Forgot>Forgot your password?</S.Forgot>
-      <Button fullWidth>Sign In</Button> */}
     </S.Content>
   </S.Wrapper>
 )

@@ -97,5 +97,3 @@ export const ContentWrapper = styled.div`
     }
   `}
 `
-
-export const Forgot = styled.a``
