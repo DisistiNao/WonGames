@@ -5,11 +5,13 @@ import FormSignIn from '.'
 
 describe('<FormSignIn />', () => {
   it('should render the form', () => {
-    renderWithTheme(<FormSignIn />)
+    const { container } = renderWithTheme(<FormSignIn />)
 
     expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument()
     expect(screen.getByPlaceholderText(/password/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument()
+
+    expect(container.parentElement).toMatchSnapshot()
   })
 
   it('should render the forgot password link', () => {
@@ -20,7 +22,7 @@ describe('<FormSignIn />', () => {
     ).toBeInTheDocument()
   })
 
-  it('should render text to sign up if already have an account', () => {
+  it('should render text to sign up if dont have an account', () => {
     renderWithTheme(<FormSignIn />)
 
     expect(screen.getByRole('link', { name: /sign up/i })).toBeInTheDocument()
