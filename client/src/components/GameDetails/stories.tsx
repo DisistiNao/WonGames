@@ -4,6 +4,17 @@ import GameDetails, { GameDetailsProps } from '.'
 export default {
   title: 'Game/GameDetails',
   component: GameDetails,
+  args: {
+    platforms: ['windows', 'linux', 'mac']
+  },
+  argTypes: {
+    platforms: {
+      control: {
+        type: 'inline-check',
+        options: ['windows', 'linux', 'mac']
+      }
+    }
+  },
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
@@ -18,6 +29,6 @@ export default {
   }
 } as Meta
 
-export const Default: Story = () => (
-  <GameDetails platforms={['windows', 'linux', 'mac']} />
+export const Default: Story<GameDetailsProps> = (args) => (
+  <GameDetails {...args} />
 )
