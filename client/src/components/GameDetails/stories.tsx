@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react'
-import GameDetails from '.'
+import GameDetails, { GameDetailsProps } from '.'
 
 export default {
   title: 'Game/GameDetails',
@@ -18,4 +18,6 @@ export default {
   }
 } as Meta
 
-export const Default: Story = () => <GameDetails />
+export const Default: Story = () => (
+  <GameDetails platforms={['windows', 'linux', 'mac']} />
+)
