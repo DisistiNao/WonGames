@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import GameDetails, { GameDetailsProps } from '.'
+import GameDetails from '.'
 import mock from './mock'
 
 describe('<GameDetails />', () => {
