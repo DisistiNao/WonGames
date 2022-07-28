@@ -20,7 +20,7 @@ jest.mock('components/Showcase', () => ({
 }))
 
 describe('<Wishlist />', () => {
-  it('should render the heading', () => {
+  it('should render correctly', () => {
     renderWithTheme(<Wishlist {...props} />)
 
     expect(
