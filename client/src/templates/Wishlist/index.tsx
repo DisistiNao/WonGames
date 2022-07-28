@@ -6,7 +6,7 @@ import Showcase from 'components/Showcase'
 import { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
 
-import * as S from './styles'
+// import * as S from './styles'
 
 export type WishlistTemplateProps = {
   recommendedGames: GameCardProps[]
