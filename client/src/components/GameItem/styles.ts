@@ -52,9 +52,16 @@ export const Title = styled.h3`
     margin-bottom: ${theme.spacings.xxsmall};
 
     ${media.greaterThan('medium')`
-    font-size: 2;
-    line-height: 2;
+      font-size: 2;
+      line-height: 2;
     `}
+  `}
+`
+
+export const DownloadLink = styled.a`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
+    margin-left: ${theme.spacings.xxsmall};
   `}
 `
 
