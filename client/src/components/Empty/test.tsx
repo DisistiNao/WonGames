@@ -10,7 +10,7 @@ const props = {
 
 describe('<Empty />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<Empty {...props} />)
+    const { container } = renderWithTheme(<Empty {...props} />)
 
     expect(
       screen.getByRole('image', {
@@ -21,10 +21,14 @@ describe('<Empty />', () => {
     expect(
       screen.getByRole('heading', { name: /a simple title/i })
     ).toBeInTheDocument()
+
     expect(screen.getByText(/a simple description/i)).toBeInTheDocument()
+
     expect(
       screen.queryByRole('link', { name: /go back to store/i })
     ).not.toBeInTheDocument()
+
+    expect(container.parentElement).toMatchSnapshot()
   })
 
   it('should render the button and the link goes home', () => {
