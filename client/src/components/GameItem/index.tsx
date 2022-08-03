@@ -1,5 +1,4 @@
 import { Download } from '@styled-icons/boxicons-solid/Download'
-
 import * as S from './styles'
 
 export type PaymentInfoProps = {
