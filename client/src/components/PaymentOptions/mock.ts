@@ -7,6 +7,6 @@ export default [
   {
     flag: 'mastercard',
     img: '/img/mastercard.png',
-    number: ' **** **** **** 4325'
+    number: ' **** **** **** 4326'
   }
 ]
